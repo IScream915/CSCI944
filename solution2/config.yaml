@@ -1,0 +1,33 @@
+dataset_path: "../rgbd_dataset_freiburg1_xyz"
+rgb_list_file: "rgb.txt"
+depth_list_file: "depth.txt"
+groundtruth_file: "groundtruth.txt"
+
+# Camera intrinsic parameters for TUM RGB-D dataset (Freiburg1)
+camera:
+  fx: 517.3  # focal length in x
+  fy: 516.5  # focal length in y
+  cx: 318.6  # principal point x
+  cy: 255.3  # principal point y
+  
+  # For depth images
+  depth_scale: 5000.0  # TUM dataset uses 5000 for depth scale
+
+# ORB Feature parameters
+orb:
+  n_features: 1000
+  scale_factor: 1.2
+  n_levels: 8
+
+# Visual Odometry parameters
+vo:
+  min_inliers: 10
+  ransac_threshold: 1.0
+  max_iterations: 2000
+
+# Visualization parameters
+visualization:
+  window_width: 800
+  window_height: 600
+  point_size: 2.0
+  line_width: 2.0
